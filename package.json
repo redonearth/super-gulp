@@ -1,0 +1,8 @@
+{
+  "name": "super-gulp",
+  "version": "1.0.0",
+  "description": "Learning Gulp by building an awesome development environment",
+  "repository": "https://github.com/redonearth/super-gulp",
+  "author": "redonearth <wona23@gmail.com>",
+  "license": "MIT"
+}
