@@ -4,6 +4,8 @@ import gulpPug from "gulp-pug";
 import ws from "gulp-webserver";
 import gulpImage from "gulp-image";
 import sass from "gulp-sass";
+import autoprefixer from "gulp-autoprefixer";
+import minifyCSS from "gulp-csso";
 
 sass.complier = require("node-sass");
 
@@ -36,6 +38,12 @@ const styles = () =>
   gulp
     .src(routes.scss.src)
     .pipe(sass().on("error", sass.logError))
+    .pipe(
+      autoprefixer({
+        browsers: ["last 2 versions"]
+      })
+    )
+    .pipe(minifyCSS())
     .pipe(gulp.dest(routes.scss.dest));
 
 const watch = () => {
