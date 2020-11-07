@@ -38,11 +38,7 @@ const styles = () =>
   gulp
     .src(routes.scss.src)
     .pipe(sass().on("error", sass.logError))
-    .pipe(
-      autoprefixer({
-        browsers: ["last 2 versions"]
-      })
-    )
+    .pipe(autoprefixer())
     .pipe(minifyCSS())
     .pipe(gulp.dest(routes.scss.dest));
 
